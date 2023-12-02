@@ -1,6 +1,6 @@
 fn main() {
     let input = include_str!("../input/1.txt");
-    let rows = input.split('\n').collect::<Vec<_>>();
+    let rows = input.lines().collect::<Vec<_>>();
     let result = rows.into_iter().map(capture_outer_digits).sum::<u32>();
     println!("Result: {result}");
 }
